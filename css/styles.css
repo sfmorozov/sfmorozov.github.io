@@ -477,9 +477,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   font-family: Montserrat;
   font-size: 14px;
   line-height: 24px;
@@ -1845,7 +1842,7 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
     padding: 10px 0 10px 0;
   }
   .breadcrumb-menu-checkbox:checked ~ .breadcrumb-list-wrp {
-    height: 50%;
+    height: 100%;
     -webkit-transition-delay: 0s;
             transition-delay: 0s;
   }
@@ -1881,7 +1878,14 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 150px;
     padding: 10px;
+  }
+  .icons-item:nth-child(3), .icons-item:nth-child(4) {
+    padding: 10px 10px 0 10px;
+  }
+  .icons-item:nth-child(1), .icons-item:nth-child(2) {
+    padding: 0 10px 10px 10px;
   }
   .icons-item-svg {
     width: 30px;
@@ -1893,14 +1897,73 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
   }
   .icons-item-p {
     font-size: 10px;
+    line-height: 15px;
+  }
+  .projects-wrp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 10px 0 10px 0;
+  }
+  .projects-span {
+    font-size: 20px;
+  }
+  .projects-p {
+    width: 100%;
+    font-size: 10px;
+    padding: 10px 5px 0 5px;
+    line-height: 15px;
+  }
+  .video-wrp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    height: 200px;
+  }
+  .video {
+    height: 100%;
+  }
+  .button-wrp {
+    padding: 25px 0 0 0;
+  }
+  .video-playbutton {
+    width: 40px;
+    height: 40px;
+  }
+  .video-playbutton-img {
+    top: 32px;
+    left: 7px;
+    width: 25px;
+    height: 25px;
+  }
+  .video-text-wrp {
+    padding: 5px 0 0 0;
+    top: 80px;
+  }
+  .video {
+    width: 100%;
+  }
+  .video-span {
+    font-size: 20px;
+  }
+  .video-p {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .video-time {
+    padding: 5px 0 0 0;
   }
   .breadcrumb-list-second,
   .slider-content-wrp,
   .img-level,
   .img-level-pics,
   .buy-wrp,
-  .projects-wrp,
-  .video-wrp,
+  .projects-nav,
+  .article-wrp,
+  .projects-load-button-wrp,
   .mobile-wrp,
   .adv-wrp-second,
   .posts-wrp,

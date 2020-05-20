@@ -347,7 +347,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
   font-family: Montserrat;
   font-size: 14px;
   line-height: 24px;
@@ -1363,7 +1363,7 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
 
 // ===========================================================================
 
-@media (max-width: 480px) {
+@media (max-width: 480px){
   body {
     width: 100%;
     margin: 0 auto;
@@ -1505,7 +1505,7 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
       &:checked ~ {
         .breadcrumb {
           &-list-wrp {
-            height: 50%;
+            height: 100%;
             transition-delay: 0s;
           }
           &-menu-btn {
@@ -1541,7 +1541,16 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
     width: 40%;
     flex-direction: column;
     align-items: center;
+    height: 150px;
     padding: 10px;
+      &:nth-child(3), 
+      &:nth-child(4){
+        padding: 10px 10px 0 10px;
+      }
+      &:nth-child(1), 
+      &:nth-child(2){
+        padding: 0 10px 10px 10px;
+      }
     &-svg{
       width: 30px;
       height: 30px;
@@ -1552,17 +1561,77 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
     }
     &-p {
       font-size: 10px;
+      line-height: 15px;
     }
   }
 }
+.projects-wrp{
+  display: flex;
+  width: 100%;
+  padding: 10px 0 10px 0;
+}
+.projects{
+  &-span{
+    font-size: 20px;
+  }
+  &-p{
+    width: 100%;
+    font-size: 10px;
+    padding: 10px 5px 0 5px;
+    line-height: 15px;
+  }
+}
+.video-wrp{
+  display: flex;
+  width: 100%;
+  padding: 10px 0 10px 0;
+  height: 200px;
+}
+.video{
+  height: 100%;
+}
+.button-wrp{
+  padding: 25px 0 0 0;
+}
+.video-playbutton{
+  width: 40px;
+  height: 40px;
+  &-img{
+    top: 32px;
+    left:7px;
+    width: 25px;
+    height: 25px;
+  }
+}
+.video-text-wrp{
+  padding:5px 0 0 0;
+  top:80px;
+}
+.video{
+  width: 100%;
+  &-span{
+    font-size: 20px;
+  }
+  &-p{
+    font-size: 10px;
+    line-height: 15px;
+  }
+  &-time{
+    padding: 5px 0 0 0;
+  }
+}
+
 
   .breadcrumb-list-second,
   .slider-content-wrp,
   .img-level,
   .img-level-pics,
   .buy-wrp,
-  .projects-wrp,
-  .video-wrp,
+  // .projects-wrp,
+  .projects-nav,
+  .article-wrp,
+  .projects-load-button-wrp,
+  // .video-wrp,
   .mobile-wrp,
   .adv-wrp-second,
   .posts-wrp,
