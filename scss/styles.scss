@@ -1024,7 +1024,6 @@ body {
   &-p {
     margin: 0;
     text-align: center;
-    display: block;
     width: 100%;
     font-family: Montserrat;
     font-size: 16px;
@@ -1259,6 +1258,7 @@ body {
   height: 340px;
 
   &-p {
+    display: block;
     margin: 0;
     font-family: Montserrat;
     font-size: 14px;
@@ -1267,11 +1267,24 @@ body {
     color: #555555;
   }
   &-p-link {
-    color: #ffffff;
     display: inline-block;
+    position: relative;
     margin: 20px 0 0 0;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    color: #ffffff;
+    text-transform: capitalize;
   }
   &-p-link:after {
+    position: absolute;
+    top: 7px;
+    left: 83px;
+    content: "";
+    display: block;
+    border: 3px solid transparent;
     border-left: 3px solid #ffffff;
   }
   &-span {
@@ -1335,14 +1348,18 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
   height: 111px;
   width: 100%;
   display: flex;
+  justify-content: space-evenly;
+  align-content: center;
   background-color: #111111;
-  position: relative;
+  // position: relative;
 
-    &-links {
-      position: absolute;
-      top: 45px;
-      left: 345px;
-    
+  &-links {
+    display: inline-flex;
+    padding: 0 125px 0 0;
+    // position: absolute;
+    // top: 45px;
+    // left: 345px;
+  
     &-text {
       display: inline-block;
       font-family: Montserrat;
@@ -1369,11 +1386,13 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
       color: #c7b299;
     }
   }
-}
-.copyrights-designedby {
-  position: absolute;
-  top: 45px;
-  left: 1170px;
+  &-designedby {
+    display: inline-flex;
+
+    // position: absolute;
+    // top: 45px;
+    // left: 1170px;
+  }
 }
 
 // ===========================================================================
@@ -1489,8 +1508,8 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
       align-items: flex-start;
       justify-content: center;
       top: 120px;
-      left: 0;
-      right: 0;
+      left: -11px;
+      right: 10px;
       z-index: 999;
       height: 0;
       opacity: 1;
@@ -1598,7 +1617,6 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
   }
 }
 .video-wrp{
-  // display: flex;
   width: 100%;
   padding: 10px 0 10px 0;
   height: 210px;
@@ -1641,22 +1659,23 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
   &-wrp{
   width: 100%;
   padding: 10px 0 10px 0;
-  height: 300px;
- }
-  // &-img{
-  //   width: 40%;
-  //   width: 50px;
-  //   height: 50px;
-  //   position: fixed;
+  height: 410px;
+  position: relative;
+  align-items: flex-start;
+  }
+  &-img{
+    width: 170px;
+    height: 240px;
+    position: absolute;
+    top: 155px;
+    left: 27px;
+    align-self: center;
+  }
+  &-img>img{
+    width: 100%;
+    height: 100%;
 
-  //   align-self: center;
-  //   // overflow: hidden;
-  // }
-  // &-img>img{
-  //   width: 100%;
-  //   height: 100%;
-
-  // }
+  }
   &-text{
     width: 100%;
     padding:0;
@@ -1677,7 +1696,55 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
       line-height: 15px;
       width: 40%;
       align-self: flex-end;
+    
+      &-li:before {
+        background-image: url(../img/mobile-ul-img-min.svg);
+        width: 10px;
+        height: 10px;
+        top: 3px;
+        left: -20px;
+      }
     }
+  }
+}
+.posts{
+  &-wrp{
+    padding: 10px 0 10px 0;
+  }
+  &-span{
+    font-size: 20px;
+  }
+  &-p{
+    font-size: 10px;
+    line-height: 15px;
+    padding: 10px 5px 10px 5px;
+  }
+  &-article{
+    margin: 10px 0 10px 0;
+  }
+}
+.partners{
+  &-wrp{
+    height: 180px;
+    background-size: cover;
+    &>a>img{
+      width: 70px;
+      height: 40px;
+      padding: 0 5px 0 5px;
+    }
+  }
+}
+.copyrights{
+  flex-wrap: wrap;
+  align-items: center;
+  &-links{
+    width:100%;
+    padding: 0 0 5px 0;
+    justify-content: center;
+  }
+  &-designedby{
+    width:100%;
+    justify-content: center;
   }
 }
   .breadcrumb-list-second,
@@ -1691,12 +1758,14 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
   .projects-load-button-wrp,
   // .video-wrp,
   // .mobile-wrp,
-  .mobile-img,
+  // .mobile-img,
   .adv-wrp-second,
-  .posts-wrp,
-  .partners-wrp,
-  .footer,
-  .copyrights{
+  // .posts-wrp,
+  .posts-buttons,
+  // .partners-wrp,
+  .footer
+  // .copyrights
+  {
     display: none;
   }
 }

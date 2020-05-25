@@ -1262,7 +1262,6 @@ body {
 .posts-p {
   margin: 0;
   text-align: center;
-  display: block;
   width: 100%;
   font-family: Montserrat;
   font-size: 16px;
@@ -1544,6 +1543,7 @@ body {
 }
 
 .footer-article-p {
+  display: block;
   margin: 0;
   font-family: Montserrat;
   font-size: 14px;
@@ -1553,12 +1553,25 @@ body {
 }
 
 .footer-article-p-link {
-  color: #ffffff;
   display: inline-block;
+  position: relative;
   margin: 20px 0 0 0;
+  text-decoration: none;
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #ffffff;
+  text-transform: capitalize;
 }
 
 .footer-article-p-link:after {
+  position: absolute;
+  top: 7px;
+  left: 83px;
+  content: "";
+  display: block;
+  border: 3px solid transparent;
   border-left: 3px solid #ffffff;
 }
 
@@ -1632,14 +1645,19 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
   background-color: #111111;
-  position: relative;
 }
 
 .copyrights-links {
-  position: absolute;
-  top: 45px;
-  left: 345px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0 125px 0 0;
 }
 
 .copyrights-links-text {
@@ -1671,9 +1689,9 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
 }
 
 .copyrights-designedby {
-  position: absolute;
-  top: 45px;
-  left: 1170px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 @media (max-width: 480px) {
@@ -1813,8 +1831,8 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
         -ms-flex-pack: center;
             justify-content: center;
     top: 120px;
-    left: 0;
-    right: 0;
+    left: -11px;
+    right: 10px;
     z-index: 999;
     height: 0;
     opacity: 1;
@@ -1960,7 +1978,25 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
   .mobile-wrp {
     width: 100%;
     padding: 10px 0 10px 0;
-    height: 300px;
+    height: 410px;
+    position: relative;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .mobile-img {
+    width: 170px;
+    height: 240px;
+    position: absolute;
+    top: 155px;
+    left: 27px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .mobile-img > img {
+    width: 100%;
+    height: 100%;
   }
   .mobile-text {
     width: 100%;
@@ -1984,6 +2020,56 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
     -ms-flex-item-align: end;
         align-self: flex-end;
   }
+  .mobile-text-ul-li:before {
+    background-image: url(../img/mobile-ul-img-min.svg);
+    width: 10px;
+    height: 10px;
+    top: 3px;
+    left: -20px;
+  }
+  .posts-wrp {
+    padding: 10px 0 10px 0;
+  }
+  .posts-span {
+    font-size: 20px;
+  }
+  .posts-p {
+    font-size: 10px;
+    line-height: 15px;
+    padding: 10px 5px 10px 5px;
+  }
+  .posts-article {
+    margin: 10px 0 10px 0;
+  }
+  .partners-wrp {
+    height: 180px;
+    background-size: cover;
+  }
+  .partners-wrp > a > img {
+    width: 70px;
+    height: 40px;
+    padding: 0 5px 0 5px;
+  }
+  .copyrights {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .copyrights-links {
+    width: 100%;
+    padding: 0 0 5px 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .copyrights-designedby {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .breadcrumb-list-second,
   .slider-content-wrp,
   .img-level,
@@ -1992,12 +2078,9 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
   .projects-nav,
   .article-wrp,
   .projects-load-button-wrp,
-  .mobile-img,
   .adv-wrp-second,
-  .posts-wrp,
-  .partners-wrp,
-  .footer,
-  .copyrights {
+  .posts-buttons,
+  .footer {
     display: none;
   }
 }
