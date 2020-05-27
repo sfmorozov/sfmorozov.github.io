@@ -1712,9 +1712,6 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
 }
 
 @media (max-width: 480px) {
-  * {
-    outline: 1px solid red;
-  }
   body {
     width: 100%;
     min-width: 344px;
