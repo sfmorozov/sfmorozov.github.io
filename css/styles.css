@@ -1852,8 +1852,8 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
         -ms-flex-pack: center;
             justify-content: center;
     top: 120px;
-    left: -11px;
-    right: 10px;
+    left: 0px;
+    right: 0px;
     z-index: 999;
     height: 0;
     opacity: 1;
