@@ -1400,6 +1400,7 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
 @media (max-width: 480px){
   body {
     width: 100%;
+    min-width: 344px;
     margin: 0 auto;
     box-sizing: border-box;
   }
@@ -1726,7 +1727,7 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
   &-article{
     margin: 10px 0 10px 0;
       &-img{
-      width: 340px;
+      width: 370px;
       height: 200px;
       }
     &:nth-child(5){
