@@ -1726,8 +1726,9 @@ body > footer > article:nth-child(4) > div > a:nth-child(4) > img {
   }
   &-article{
     margin: 10px 0 10px 0;
+    width: 100%;
       &-img{
-      width: 370px;
+      width: 100%;
       height: 200px;
       }
     &:nth-child(5){
